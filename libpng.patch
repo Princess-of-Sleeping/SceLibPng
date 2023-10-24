@@ -1,0 +1,24 @@
+diff -ru a/src/libpng_download/pngerror.c b/src/libpng_download/pngerror.c
+--- a/src/libpng_download/pngerror.c	1970-01-01 00:00:00.000000000 +0900
++++ b/src/libpng_download/pngerror.c	1970-01-01 00:00:00.000000000 +0900
+@@ -711,7 +711,7 @@
+ png_default_error,(png_const_structrp png_ptr, png_const_charp error_message),
+     PNG_NORETURN)
+ {
+-#ifdef PNG_CONSOLE_IO_SUPPORTED
++#if 0
+ #ifdef PNG_ERROR_NUMBERS_SUPPORTED
+    /* Check on NULL only added in 1.5.4 */
+    if (error_message != NULL && *error_message == PNG_LITERAL_SHARP)
+diff -ru a/src/libpng_download/pngerror.c b/src/libpng_download/pngerror.c
+--- a/src/libpng_download/pngerror.c	1970-01-01 00:00:00.000000000 +0900
++++ b/src/libpng_download/pngerror.c	1970-01-01 00:00:00.000000000 +0900
+@@ -784,7 +784,7 @@
+ static void /* PRIVATE */
+ png_default_warning(png_const_structrp png_ptr, png_const_charp warning_message)
+ {
+-#ifdef PNG_CONSOLE_IO_SUPPORTED
++#if 0
+ #  ifdef PNG_ERROR_NUMBERS_SUPPORTED
+    if (*warning_message == PNG_LITERAL_SHARP)
+    {
